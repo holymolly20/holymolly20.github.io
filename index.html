@@ -1,44 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>使用JS和HTML5实现动态显示系统时间</title>
-<style type="text/css">
-	#time{
-		font: bold 24pt STXihei;
-		width: 150px;
-		line-height: 50px;
-		margin: 5px auto;
-		text-align: center;
-	}
-</style>
-</head>
-
-<body>
-	<div id="time"></div>
-	
-	<script type="text/javascript">
-	function showTime(){
-		"use strict";
-		//创建Date对象获取系统星期和时分秒
-		  var time = new Date();  
-		  // var year = time.getFullYear(); //年
-		  var month = time.getMonth() + 1; // 程序计时的月从0开始取值后，因此显示的真实月份需要+1  
-		  var day = time.getDate(); //日
-		  var hours = time.getHours();//时
-		  var minutes =  time.getMinutes();//分
-		  var seconds = time.getSeconds();//秒
-		  var date = month + "月" + day + "日";
-		  var nowTime =month + "月" + day + "日" + hours + ":" + minutes + ":" + seconds;
-	 		//将获取到的星期数字转换成平时我们看到的字符串形式
-		
-		//获取元素ID
-		var elementDiv=document.getElementById("time").innerHTML=date;	
-	  var elementDiv=document.getElementById("time").innerHTML=nowTime;	
-	  }
-		//实现时间动态变化
-		window.setInterval("showTime()",1000);
-	</script>
-
-</body>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		 <meta http-equiv="refresh" content="10;url= https://u.wechat.com/MJP0BVhaDt7aRbWe2WGCns8 ">
+	</head>
+	<body>
+		gogogo
+	</body>
 </html>
