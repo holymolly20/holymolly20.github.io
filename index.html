@@ -1,11 +1,90 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8" />
 		<title></title>
-		 <meta http-equiv="refresh" content="0;https://u.wechat.com/MJP0BVhaDt7aRbWe2WGCns8 ">
+		<style>
+			*{
+				padding: 0;
+			}
+			body{
+				background-image: url(img/已扫码.jpg);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+			.date{
+				font-size: 96px;
+				font-family: sans-serif;
+				text-align: center;
+				padding-top: 160px;
+				font-weight: 600;
+				color: #49AA65;
+			}
+			.time{
+				font-size: 150px;
+				font-family: sans-serif;
+				text-align: center;
+				font-weight: 600;
+				color: #49AA65;
+			}
+			input{
+				border: 0;
+				text-align: center;
+				width: 100%;
+				background-color: transparent;
+				margin-top: 120px;
+				font-size: 44px;
+				font-weight: 500;
+				color: #49AA65;
+				outline: none;
+			}
+			.click{
+				width: 100%;
+				height: 800px;
+				/* background-color: red; */
+				float: right;
+				margin-top: 600px;
+			}
+		</style>
+		
 	</head>
-	<body>
-		gogogo
+	<body onload="startTime()">
+		<script>
+			function startTime(){
+				var today = new Date();
+				var h = today.getHours();
+				var m =today.getMinutes();
+				var s =today.getSeconds();
+				var n =today.getFullYear();
+				var y =today.getMonth()+1;
+				var r =today.getDate();
+				m = checkTime(m);
+				s = checkTime(s);
+				h = checkTime(h);
+				r = checkTime(r);
+				document.getElementById("timetext").innerHTML = h+":"+m+":"+s;
+				document.getElementById("date").innerHTML = y+"月"+r+"日";
+				t = setTimeout(function(){
+					startTime();
+				},500);
+			}
+			
+			function checkTime(i){
+				if(i<10){
+					i = "0"+i;
+				}
+				return i;
+			}
+		</script>
+		<div id="date" class="date">4月03日</div>
+		<div id="timetext" class="time">07:07:33</div>
+		<div>
+			<input type="text" value="杭州健康码">
+		</div>
+		<a href="green.html">
+			<div class="click">
+				
+			</div>
+		</a>
 	</body>
 </html>
