@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			Date.prototype.toArray = function()  
+			{   
+			    var myDate = this;  
+			    var myArray = Array();  
+			    myArray[0] = myDate.getFullYear();  
+			    myArray[1] = myDate.getMonth();  
+			    myArray[2] = myDate.getDate();  
+			    myArray[3] = myDate.getHours();  
+			    myArray[4] = myDate.getMinutes();  
+			    myArray[5] = myDate.getSeconds();  
+			    return myArray;  
+				
+			}  
+			document.write(myArray[0]);
+		</script>
+	</body>
+</html>
